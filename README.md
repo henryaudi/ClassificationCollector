@@ -1,4 +1,4 @@
-# User Classification Collector 👨‍💻
+# Data Processing Toolkit 👨‍💻
 
 This is a labling tool designated for environmental variable labling, where user would be prompt with statements, and they would classify the statement whether it falls under environmental variable. The result would be collected into the `annotation_01.csv` file and later used for language model training.
 
