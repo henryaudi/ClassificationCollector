@@ -21,7 +21,7 @@ def generate_urls_by_year(forms):
              as its value
     """
     base_url = "https://www.irs.gov/pub/irs-prior/"
-    years = range(2012, 2023)
+    years = range(2012, 2024)
     urls = {}
 
     for form in forms:
@@ -50,9 +50,10 @@ def check_urls_and_collect_data(urls_with_year):
             try:
                 response = requests.get(url, allow_redirects=True)
                 status_code = response.status_code
-                print(response)
+                print(f"Form {form}-{year} was fetched with status code {status_code}")
             except requests.ConnectionError:
-                status_code = None  # In case the request fails
+                status_code = None
+                print(f"Failed to fetch form {form}")
             form_data.append((year, status_code, url))
         data_with_status[form] = form_data
 
