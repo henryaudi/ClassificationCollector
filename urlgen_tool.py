@@ -61,7 +61,7 @@ def check_urls_and_collect_data(urls_with_year):
 
 def write_to_csv(forms, data_with_status):
     """
-
+    Output the data into csv file for individual forms spanning from year 2012-2023.
     :param forms: list of strings, where each string represents the name of
                   an IRS form (e.g., 'f1040')
     :param data_with_status: A dictionary where each key is a form name and
